@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vietnam Booking - Trọn Gói Giá Tốt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e6e8f2",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f1f3fe",
+                      "neutral-50": "#f4f5f6",
+                      "neutral-200": "#e6e8ec",
+                      "neutral-300": "#b1b5c3",
+                      "inverse-surface": "#2d3038",
+                      "inverse-on-surface": "#eff0fb",
+                      "surface-container-lowest": "#ffffff",
+                      "neutral-100": "#eef0f1",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e0e2ec",
+                      "inverse-primary": "#acc7ff",
+                      "on-tertiary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f9f9ff",
+                      "on-background": "#181c23",
+                      "neutral-800": "#141416",
+                      "background": "#f9f9ff",
+                      "neutral-900": "#111315",
+                      "secondary": "#825500",
+                      "surface": "#f9f9ff",
+                      "tertiary": "#964400",
+                      "sale-red-dark": "#DC2626",
+                      "neutral-700": "#23262f",
+                      "on-surface-variant": "#414754",
+                      "primary-fixed": "#d7e2ff",
+                      "primary-fixed-dim": "#acc7ff",
+                      "on-primary-fixed": "#001b40",
+                      "neutral-400": "#777e90",
+                      "sale-red": "#EF4444",
+                      "tertiary-container": "#bd5700",
+                      "on-primary-container": "#fefcff",
+                      "tertiary-fixed-dim": "#ffb68c",
+                      "surface-dim": "#d8d9e4",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#005cbd",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#ffdbc9",
+                      "secondary-fixed": "#ffddb3",
+                      "surface-container-highest": "#e0e2ec",
+                      "outline-variant": "#c1c6d6",
+                      "outline": "#717785",
+                      "yellow-accent": "#f5cb36",
+                      "on-error": "#ffffff",
+                      "neutral-600": "#33383f",
+                      "primary-container": "#0071e6",
+                      "on-secondary-fixed": "#291800",
+                      "secondary-fixed-dim": "#ffb952",
+                      "on-tertiary-fixed-variant": "#753400",
+                      "messenger-blue": "#0084FF",
+                      "on-surface": "#181c23",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#694300",
+                      "neutral-500": "#353945",
+                      "on-secondary-fixed-variant": "#633f00",
+                      "on-tertiary-fixed": "#321200",
+                      "surface-container": "#ecedf8",
+                      "secondary-container": "#feaa0b",
+                      "on-primary-fixed-variant": "#004590",
+                      "zalo-blue": "#0068FF",
+                      "primary": "#0059b8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "20px",
+                      "sidebar-width": "280px",
+                      "section-v-padding": "64px",
+                      "card-gap": "24px",
+                      "container-max": "1170px"
+              },
+              "fontFamily": {
+                      "section-heading": [
+                              "Open Sans"
+                      ],
+                      "button-label": [
+                              "Open Sans"
+                      ],
+                      "body-main": [
+                              "Open Sans"
+                      ],
+                      "utility-text": [
+                              "Open Sans"
+                      ],
+                      "card-title": [
+                              "Open Sans"
+                      ],
+                      "price-sale": [
+                              "Open Sans"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "button-label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-main": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "utility-text": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "price-sale": [
+                              "22px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+    </style>
+</head>
+<body class="antialiased min-h-screen font-body-main text-body-main">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-neutral-900 docked full-width top-0 sticky z-50 shadow-md border-b border-neutral-200 dark:border-neutral-700">
+<div class="max-w-[1170px] mx-auto flex flex-col w-full px-4">
+<div class="flex items-center justify-between h-16">
+<!-- Brand -->
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+<span class="text-2xl font-bold text-primary dark:text-primary-fixed">Vietnam Booking</span>
+</div>
+<!-- Desktop Nav Links -->
+<div class="hidden md:flex items-center space-x-6 h-full">
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Tours</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Khách Sạn</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Vé Máy Bay</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Combo</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Visa</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary h-full flex items-center hover:bg-surface-container-low dark:hover:bg-neutral-800 transition-colors duration-200 px-3 scale-95 active:opacity-80 transition-transform" href="#">Blog</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-neutral-800 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-neutral-800 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-button-label text-button-label px-6 py-2 rounded-lg shadow-sm transition-colors scale-95 active:opacity-80 transition-transform whitespace-nowrap">
+                        Liên Hệ Ngay
+                    </button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main>
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-primary to-primary-container pt-16 pb-24 overflow-hidden">
+<!-- Background Image Overlay -->
+<div class="absolute inset-0 opacity-20">
+<img alt="Beautiful landscape in Vietnam with mountains, water, and traditional boats. High quality corporate travel photography." class="w-full h-full object-cover" data-alt="A sweeping, cinematic aerial view of Ha Long Bay, Vietnam, showcasing towering limestone karsts emerging from emerald waters. A traditional wooden junk boat with vibrant orange sails glides peacefully through the scene. The lighting is bright and sunny, evoking a sense of adventure and tranquility. The overall aesthetic is professional, inviting, and aligned with a premium travel brand's vibrant blue and yellow color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZkV2_PBiK_HXpPqU2hzeT4OEETmDUk1PGnrRiqQvuOfvdl-O_3pHKg0Hz6XfC4TtTKO9DBYrnHStyaElL8vQNqbHA3S51LTFmxS742sP97c8QtuUpTd537k7eAnmLlpO-nvM7AVOX25tKqwrZ0eWeZpwtJld3VBAX3D_G3Aj4E7cmzbZ0Be1pRRe9lwBdClYW0gAyc9GRDpddxfZmzvGgipPYwvTJAizI9hDfiq7O52VERBFI9Jy45MPjLIzRcePR5hMk5Kk1myG"/>
+</div>
+<div class="max-w-[1170px] mx-auto px-4 relative z-10">
+<div class="text-center mb-10">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-primary mb-4 drop-shadow-md">Combo Du Lịch Trọn Gói Giá Tốt</h1>
+<p class="text-xl text-primary-fixed-dim max-w-2xl mx-auto">Trải nghiệm kỳ nghỉ tuyệt vời cùng Vietnam Booking với dịch vụ hỗ trợ 24/7</p>
+</div>
+<!-- Search Card -->
+<div class="bg-surface rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.15)] p-6 max-w-4xl mx-auto border border-neutral-200">
+<!-- Search Tabs -->
+<div class="flex border-b border-neutral-200 mb-6 overflow-x-auto hide-scrollbar">
+<button class="px-6 py-3 font-button-label text-button-label text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap border-b-2 border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-[20px]">flight</span> Vé Máy Bay
+                        </button>
+<button class="px-6 py-3 font-button-label text-button-label text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap border-b-2 border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-[20px]">hotel</span> Khách Sạn
+                        </button>
+<button class="px-6 py-3 font-button-label text-button-label text-primary border-b-2 border-primary flex items-center gap-2 whitespace-nowrap bg-primary-fixed/20 rounded-t-lg">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">sell</span> Combo
+                        </button>
+<button class="px-6 py-3 font-button-label text-button-label text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap border-b-2 border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-[20px]">tour</span> Tour
+                        </button>
+</div>
+<!-- Search Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+<div class="md:col-span-4 relative">
+<label class="block font-button-label text-utility-text text-on-surface-variant mb-1 ml-1">Điểm đến</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400">location_on</span>
+<input class="w-full pl-10 pr-4 h-10 bg-surface-container-lowest border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-body-main text-on-surface" placeholder="Phú Quốc, Đà Nẵng, Nha Trang..." type="text"/>
+</div>
+</div>
+<div class="md:col-span-3 relative">
+<label class="block font-button-label text-utility-text text-on-surface-variant mb-1 ml-1">Ngày đi - Ngày về</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400">calendar_month</span>
+<input class="w-full pl-10 pr-4 h-10 bg-surface-container-lowest border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-body-main text-on-surface" placeholder="Chọn ngày" type="text"/>
+</div>
+</div>
+<div class="md:col-span-3 relative">
+<label class="block font-button-label text-utility-text text-on-surface-variant mb-1 ml-1">Số khách</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400">group</span>
+<input class="w-full pl-10 pr-4 h-10 bg-surface-container-lowest border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-body-main text-on-surface" placeholder="2 Người lớn, 0 Trẻ em" type="text"/>
+</div>
+</div>
+<div class="md:col-span-2">
+<button class="w-full h-10 bg-secondary-container hover:bg-yellow-accent text-on-secondary-container font-button-label text-button-label rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined">search</span>
+                                Tìm Ưu Đãi
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Combo Section: Bento Grid -->
+<section class="py-section-v-padding bg-neutral-50">
+<div class="max-w-[1170px] mx-auto px-4">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-section-heading text-section-heading text-on-surface">Combo Khách Sạn + Vé Máy Bay Ưu Đãi</h2>
+<p class="text-on-surface-variant mt-2 font-body-main">Tiết kiệm hơn so với đặt lẻ, trải nghiệm trọn vẹn.</p>
+</div>
+<button class="hidden md:flex items-center gap-1 text-primary font-button-label text-button-label hover:underline">
+                        Xem tất cả <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-card-gap"><!-- Combo Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Phu Quoc beach resort" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsWwjKCv6s9Gbem0d23n9-vXUrhs2v-IVxadbwJvoKPsBnLYmtiIxSJJ42JYSHWIy6DmCT8pMqoRVxHM3HrCfnUYRDTnNYC0PuuUyQmlwRRyhh3_5ZxeecFP8KCc4wjEe_HLwBFQnnf_S_4oCJy2IbxuRbGdmu-A1szFzRfnkTt7mj8SVMITFVUtXfK1ABpBaucngVc7eQrpz8bzkQOO7Xx_F0B7s2Ou2L2RI5MTO2jEeFCokdyVKcbMWMyhSTz9lAIW4GA9QbDLs"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">
+                                Giảm 20%
+                            </div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-sm px-2 py-1 rounded text-utility-text font-button-label flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flight</span> Hãng bay VN
+                                </span>
+</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Phú Quốc + Khách sạn 5 sao Vinpearl</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành hằng ngày
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">4.500.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">3.590.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 2 (Da Nang) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Da Nang Golden Bridge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAfU0Oob2I5hhBB880p4WZMtL-fm7mJ1NvXIE-6qFuAWmbE8qv-Eeo0HSE1hw0-ihQBewRo3ahkXes7q0zAxD9R7ROPy_69mc8-7ZaOEvKZ-v6ZuqecLZW6m_x-ZNuK8ZuhRJ7cdoBMlLVZ_heYqXOaohrnFQm4Ma12tt7zmUD-je-CiaeSI1Gf0rbReBy0QhLACTVDZOr5llbzQrri40DEF3VMIuM2e7maNi1xRx1-Mb0vUeR_z7R4inzzmgPZY54ylNGkiWbx_2"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">
+                                Giảm 15%
+                            </div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 4N3Đ Đà Nẵng - Hội An + Vé máy bay khứ hồi</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành T3, T5 hàng tuần
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">3.800.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">3.250.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 3 (Nha Trang) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Nha Trang beach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD26GcFWT84vvTXSYrYENkgYcUDMtoDrV1Yz5jpesyMqe8fNHF-skXgLV46YWUldN7lNzpzK_gdhhNLk4tY5bM4TD_BF0mVKJjdvVWlRYDwpcy4TjjWqBlncMqwKaEHaN64ubureLyfCCjV51lAFctn9RVzr7DtGoDrYMWMb6gaGbHN3TwDOVt2Aiheh_LhOEq21pp6Yljb7iEjyClWIw3KNZLi8zRNhep73vOR7nuY3VjIX-iRSVccId49KwmdwxSMROuz6XFAIjU3"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Mới</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-neutral-200" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Nha Trang + Khách sạn mặt biển</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Theo yêu cầu
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">3.200.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">2.890.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 4 (Quy Nhon) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Quy Nhon Coastline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD26GcFWT84vvTXSYrYENkgYcUDMtoDrV1Yz5jpesyMqe8fNHF-skXgLV46YWUldN7lNzpzK_gdhhNLk4tY5bM4TD_BF0mVKJjdvVWlRYDwpcy4TjjWqBlncMqwKaEHaN64ubureLyfCCjV51lAFctn9RVzr7DtGoDrYMWMb6gaGbHN3TwDOVt2Aiheh_LhOEq21pp6Yljb7iEjyClWIw3KNZLi8zRNhep73vOR7nuY3VjIX-iRSVccId49KwmdwxSMROuz6XFAIjU3"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 25%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Quy Nhơn + Resort FLC Luxury</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành T4, T6
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">5.200.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">3.900.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 5 (Ha Long) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Ha Long Bay Cruise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZkV2_PBiK_HXpPqU2hzeT4OEETmDUk1PGnrRiqQvuOfvdl-O_3pHKg0Hz6XfC4TtTKO9DBYrnHStyaElL8vQNqbHA3S51LTFmxS742sP97c8QtuUpTd537k7eAnmLlpO-nvM7AVOX25tKqwrZ0eWeZpwtJld3VBAX3D_G3Aj4E7cmzbZ0Be1pRRe9lwBdClYW0gAyc9GRDpddxfZmzvGgipPYwvTJAizI9hDfiq7O52VERBFI9Jy45MPjLIzRcePR5hMk5Kk1myG"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 10%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 2N1Đ Hạ Long + Du thuyền 5 sao chuẩn quốc tế</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành hàng ngày
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">2.800.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">2.490.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 6 (Sapa) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Sapa Mountain View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAfU0Oob2I5hhBB880p4WZMtL-fm7mJ1NvXIE-6qFuAWmbE8qv-Eeo0HSE1hw0-ihQBewRo3ahkXes7q0zAxD9R7ROPy_69mc8-7ZaOEvKZ-v6ZuqecLZW6m_x-ZNuK8ZuhRJ7cdoBMlLVZ_heYqXOaohrnFQm4Ma12tt7zmUD-je-CiaeSI1Gf0rbReBy0QhLACTVDZOr5llbzQrri40DEF3VMIuM2e7maNi1xRx1-Mb0vUeR_z7R4inzzmgPZY54ylNGkiWbx_2"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 12%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Sapa + Khách sạn view núi Fansipan</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Theo lịch xe khách
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">3.200.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">2.790.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 7 (Binh Dinh) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Binh Dinh Beach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD26GcFWT84vvTXSYrYENkgYcUDMtoDrV1Yz5jpesyMqe8fNHF-skXgLV46YWUldN7lNzpzK_gdhhNLk4tY5bM4TD_BF0mVKJjdvVWlRYDwpcy4TjjWqBlncMqwKaEHaN64ubureLyfCCjV51lAFctn9RVzr7DtGoDrYMWMb6gaGbHN3TwDOVt2Aiheh_LhOEq21pp6Yljb7iEjyClWIw3KNZLi8zRNhep73vOR7nuY3VjIX-iRSVccId49KwmdwxSMROuz6XFAIjU3"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 18%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 4N3Đ Bình Định - Kỳ Co Eo Gió</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> T7 hàng tuần
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">4.500.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">3.690.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 8 (Con Dao) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Con Dao Island" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsWwjKCv6s9Gbem0d23n9-vXUrhs2v-IVxadbwJvoKPsBnLYmtiIxSJJ42JYSHWIy6DmCT8pMqoRVxHM3HrCfnUYRDTnNYC0PuuUyQmlwRRyhh3_5ZxeecFP8KCc4wjEe_HLwBFQnnf_S_4oCJy2IbxuRbGdmu-A1szFzRfnkTt7mj8SVMITFVUtXfK1ABpBaucngVc7eQrpz8bzkQOO7Xx_F0B7s2Ou2L2RI5MTO2jEeFCokdyVKcbMWMyhSTz9lAIW4GA9QbDLs"/>
+<div class="absolute top-3 right-3 bg-primary text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Bán chạy</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Côn Đảo + Khách sạn 4 sao gần biển</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành hàng ngày
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">5.800.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">5.250.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 9 (Da Lat) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Da Lat Pine Forest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAfU0Oob2I5hhBB880p4WZMtL-fm7mJ1NvXIE-6qFuAWmbE8qv-Eeo0HSE1hw0-ihQBewRo3ahkXes7q0zAxD9R7ROPy_69mc8-7ZaOEvKZ-v6ZuqecLZW6m_x-ZNuK8ZuhRJ7cdoBMlLVZ_heYqXOaohrnFQm4Ma12tt7zmUD-je-CiaeSI1Gf0rbReBy0QhLACTVDZOr5llbzQrri40DEF3VMIuM2e7maNi1xRx1-Mb0vUeR_z7R4inzzmgPZY54ylNGkiWbx_2"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 15%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Đà Lạt + Khách sạn khu Hòa Bình</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành hàng ngày
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">2.800.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">2.390.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 10 (Phan Thiet) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Phan Thiet Sand Dunes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD26GcFWT84vvTXSYrYENkgYcUDMtoDrV1Yz5jpesyMqe8fNHF-skXgLV46YWUldN7lNzpzK_gdhhNLk4tY5bM4TD_BF0mVKJjdvVWlRYDwpcy4TjjWqBlncMqwKaEHaN64ubureLyfCCjV51lAFctn9RVzr7DtGoDrYMWMb6gaGbHN3TwDOVt2Aiheh_LhOEq21pp6Yljb7iEjyClWIw3KNZLi8zRNhep73vOR7nuY3VjIX-iRSVccId49KwmdwxSMROuz6XFAIjU3"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 20%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 2N1Đ Phan Thiết + Resort Mũi Né</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Theo yêu cầu
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">2.100.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">1.690.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 11 (Vung Tau) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Vung Tau Sea View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsWwjKCv6s9Gbem0d23n9-vXUrhs2v-IVxadbwJvoKPsBnLYmtiIxSJJ42JYSHWIy6DmCT8pMqoRVxHM3HrCfnUYRDTnNYC0PuuUyQmlwRRyhh3_5ZxeecFP8KCc4wjEe_HLwBFQnnf_S_4oCJy2IbxuRbGdmu-A1szFzRfnkTt7mj8SVMITFVUtXfK1ABpBaucngVc7eQrpz8bzkQOO7Xx_F0B7s2Ou2L2RI5MTO2jEeFCokdyVKcbMWMyhSTz9lAIW4GA9QbDLs"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Ưu đãi</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-neutral-200" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-neutral-200" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 2N1Đ Vũng Tàu + Khách sạn 3 sao trung tâm</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Khởi hành hàng ngày
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">1.500.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">1.290.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Combo Card 12 (Hue) -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 border border-neutral-200 flex flex-col h-full group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-variant">
+<img alt="Hue Imperial City" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZkV2_PBiK_HXpPqU2hzeT4OEETmDUk1PGnrRiqQvuOfvdl-O_3pHKg0Hz6XfC4TtTKO9DBYrnHStyaElL8vQNqbHA3S51LTFmxS742sP97c8QtuUpTd537k7eAnmLlpO-nvM7AVOX25tKqwrZ0eWeZpwtJld3VBAX3D_G3Aj4E7cmzbZ0Be1pRRe9lwBdClYW0gAyc9GRDpddxfZmzvGgipPYwvTJAizI9hDfiq7O52VERBFI9Jy45MPjLIzRcePR5hMk5Kk1myG"/>
+<div class="absolute top-3 right-3 bg-sale-red text-on-primary font-button-label text-utility-text px-2 py-1 rounded shadow-md">Giảm 10%</div>
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-2 line-clamp-2">Combo 3N2Đ Huế + Khách sạn di sản Imperial</h3>
+<p class="text-utility-text text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> T4 hàng tuần
+                            </p>
+<div class="mt-auto pt-4 border-t border-neutral-200 flex items-center justify-between"><div class="flex flex-col gap-3 w-full">
+<div class="flex items-baseline">
+<div>
+<p class="text-utility-text text-neutral-400 line-through">3.500.000đ</p>
+<p class="font-price-sale text-price-sale text-sale-red flex items-baseline gap-1">3.150.000đ<span class="text-utility-text font-normal text-on-surface-variant">/khách</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full">
+<button class="border border-primary text-primary hover:bg-primary-fixed/10 py-2 rounded text-[12px] font-button-label w-full">Chi Tiết</button>
+<button class="bg-zalo-blue hover:bg-primary-container text-on-primary py-2 rounded text-[12px] flex items-center justify-center gap-1 font-button-label w-full">
+<span class="material-symbols-outlined text-[14px]">chat</span> Zalo
+    </button>
+</div>
+</div></div>
+</div>
+</div></div>
+</div>
+</section>
+</main>
+<!-- SideNavBar (Floating Action Widget) -->
+<aside class="fixed right-4 bottom-24 z-40 flex flex-col gap-2 bg-surface-container-highest dark:bg-neutral-800 rounded-xl w-16 shadow-2xl border border-outline-variant p-2">
+<div class="flex flex-col items-center gap-4 py-2">
+<!-- Active Tab Example -->
+<button class="bg-secondary-container text-on-secondary-container rounded-lg p-3 Active: scale-90 transition-transform hover:translate-x-[-4px] relative group" title="Hotline">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-utility-text opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Hotline</span>
+</button>
+<button class="text-on-surface-variant dark:text-neutral-300 p-3 Active: scale-90 transition-transform hover:translate-x-[-4px] relative group" title="Zalo Chat">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-utility-text opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Zalo Chat</span>
+</button>
+<button class="text-on-surface-variant dark:text-neutral-300 p-3 Active: scale-90 transition-transform hover:translate-x-[-4px] relative group" title="Messenger">
+<span class="material-symbols-outlined">forum</span>
+<span class="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-utility-text opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Messenger</span>
+</button>
+<button class="text-on-surface-variant dark:text-neutral-300 p-3 Active: scale-90 transition-transform hover:translate-x-[-4px] relative group" title="Yêu Cầu Gọi Lại">
+<span class="material-symbols-outlined">phone_callback</span>
+<span class="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-utility-text opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Yêu Cầu Gọi Lại</span>
+</button>
+</div>
+</aside>
+<!-- Footer -->
+<footer class="bg-neutral-900 dark:bg-neutral-900 w-full pt-section-v-padding pb-8 border-t border-neutral-700 flat">
+<div class="max-w-[1170px] mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-card-gap">
+<div class="md:col-span-2">
+<div class="font-section-heading text-neutral-50 text-xl mb-4">Vietnam Booking</div>
+<p class="text-neutral-400 font-body-main text-body-main mb-6">Trải nghiệm dịch vụ du lịch trọn gói chuyên nghiệp, hỗ trợ tận tâm 24/7. Uy tín và chất lượng làm nên thương hiệu.</p>
+<div class="text-neutral-400 font-utility-text text-utility-text">
+                    © 2024 CÔNG TY CỔ PHẦN VIETNAM BOOKING. Mã số thuế: 0310874914.
+                </div>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h4 class="text-neutral-100 font-button-label text-button-label mb-4">Liên kết hữu ích</h4>
+<ul class="space-y-2">
+<li><a class="text-neutral-400 hover:text-neutral-100 hover:underline transition-all opacity-100 hover:opacity-80 font-body-main text-body-main" href="#">Về chúng tôi</a></li>
+<li><a class="text-neutral-400 hover:text-neutral-100 hover:underline transition-all opacity-100 hover:opacity-80 font-body-main text-body-main" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-neutral-400 hover:text-neutral-100 hover:underline transition-all opacity-100 hover:opacity-80 font-body-main text-body-main" href="#">Điều khoản sử dụng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-neutral-100 font-button-label text-button-label mb-4">Hỗ trợ khách hàng</h4>
+<ul class="space-y-2">
+<li><a class="text-neutral-400 hover:text-neutral-100 hover:underline transition-all opacity-100 hover:opacity-80 font-body-main text-body-main" href="#">Hướng dẫn thanh toán</a></li>
+<li><a class="text-neutral-400 hover:text-neutral-100 hover:underline transition-all opacity-100 hover:opacity-80 font-body-main text-body-main" href="#">Liên hệ</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
