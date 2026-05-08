@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Combo Vé Máy Bay Và Khách Sạn Giá Tốt | Vietnam Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e6e8f2",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f1f3fe",
+                      "neutral-50": "#f4f5f6",
+                      "neutral-200": "#e6e8ec",
+                      "neutral-300": "#b1b5c3",
+                      "inverse-surface": "#2d3038",
+                      "inverse-on-surface": "#eff0fb",
+                      "surface-container-lowest": "#ffffff",
+                      "neutral-100": "#eef0f1",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e0e2ec",
+                      "inverse-primary": "#acc7ff",
+                      "on-tertiary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f9f9ff",
+                      "on-background": "#181c23",
+                      "neutral-800": "#141416",
+                      "background": "#f9f9ff",
+                      "neutral-900": "#111315",
+                      "secondary": "#825500",
+                      "surface": "#f9f9ff",
+                      "tertiary": "#964400",
+                      "sale-red-dark": "#DC2626",
+                      "neutral-700": "#23262f",
+                      "on-surface-variant": "#414754",
+                      "primary-fixed": "#d7e2ff",
+                      "primary-fixed-dim": "#acc7ff",
+                      "on-primary-fixed": "#001b40",
+                      "neutral-400": "#777e90",
+                      "sale-red": "#EF4444",
+                      "tertiary-container": "#bd5700",
+                      "on-primary-container": "#fefcff",
+                      "tertiary-fixed-dim": "#ffb68c",
+                      "surface-dim": "#d8d9e4",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#005cbd",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#ffdbc9",
+                      "secondary-fixed": "#ffddb3",
+                      "surface-container-highest": "#e0e2ec",
+                      "outline-variant": "#c1c6d6",
+                      "outline": "#717785",
+                      "yellow-accent": "#f5cb36",
+                      "on-error": "#ffffff",
+                      "neutral-600": "#33383f",
+                      "primary-container": "#0071e6",
+                      "on-secondary-fixed": "#291800",
+                      "secondary-fixed-dim": "#ffb952",
+                      "on-tertiary-fixed-variant": "#753400",
+                      "messenger-blue": "#0084FF",
+                      "on-surface": "#181c23",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#694300",
+                      "neutral-500": "#353945",
+                      "on-secondary-fixed-variant": "#633f00",
+                      "on-tertiary-fixed": "#321200",
+                      "surface-container": "#ecedf8",
+                      "secondary-container": "#feaa0b",
+                      "on-primary-fixed-variant": "#004590",
+                      "zalo-blue": "#0068FF",
+                      "primary": "#0059b8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "20px",
+                      "sidebar-width": "280px",
+                      "section-v-padding": "64px",
+                      "card-gap": "24px",
+                      "container-max": "1170px"
+              },
+              "fontFamily": {
+                      "section-heading": [
+                              "Open Sans"
+                      ],
+                      "button-label": [
+                              "Open Sans"
+                      ],
+                      "body-main": [
+                              "Open Sans"
+                      ],
+                      "utility-text": [
+                              "Open Sans"
+                      ],
+                      "card-title": [
+                              "Open Sans"
+                      ],
+                      "price-sale": [
+                              "Open Sans"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "button-label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-main": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "utility-text": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "price-sale": [
+                              "22px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .ambient-shadow { box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body-main text-body-main antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (JSON Anchor) -->
+<header class="bg-surface dark:bg-neutral-900 shadow-md border-b border-neutral-200 dark:border-neutral-700 docked full-width top-0 sticky z-50">
+<div class="max-w-[1170px] mx-auto flex flex-col w-full px-4">
+<div class="flex items-center justify-between h-16">
+<!-- Brand Logo -->
+<a class="text-2xl font-bold text-primary dark:text-primary-fixed" href="#">Vietnam Booking</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Tours</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Khách Sạn</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Vé Máy Bay</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Combo</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Visa</a>
+<a class="text-on-surface-variant dark:text-neutral-300 font-medium hover:text-primary transition-colors duration-200 py-4 hover:bg-surface-container-low dark:hover:bg-neutral-800 scale-95 active:opacity-80 transition-transform" href="#">Blog</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="call">call</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="chat">chat</span></button>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-button-label text-button-label px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">Liên Hệ Ngay</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs -->
+<div class="bg-neutral-50 border-b border-neutral-200 py-3">
+<div class="max-w-container-max mx-auto px-4">
+<nav aria-label="Breadcrumb" class="flex text-neutral-500 font-utility-text text-utility-text">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="#">Trang chủ</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Combo du lịch</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-surface">Combo vé máy bay &amp; khách sạn</span>
+</div>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="py-section-v-padding bg-background">
+<div class="max-w-container-max mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-card-gap">
+<!-- Sidebar (280px) -->
+<aside class="w-full lg:w-[280px] shrink-0 space-y-6">
+<!-- Search Filter -->
+<div class="bg-surface rounded-xl border border-neutral-200 p-5 ambient-shadow">
+<h3 class="font-card-title text-card-title mb-4">Tìm kiếm Combo</h3>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400">search</span>
+<input class="w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg focus:ring-primary focus:border-primary bg-surface font-body-main text-body-main h-[40px]" placeholder="Tìm tên combo, điểm đến..." type="text"/>
+</div>
+</div>
+<!-- Filter Groups -->
+<div class="bg-surface rounded-xl border border-neutral-200 ambient-shadow divide-y divide-neutral-200">
+<!-- Rating Filter -->
+<div class="p-5">
+<h4 class="font-bold mb-3">Xếp hạng sao</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<div class="flex items-center gap-1 text-yellow-accent">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-neutral-500 ml-auto font-utility-text text-utility-text">(124)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<div class="flex items-center gap-1 text-yellow-accent">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neutral-200" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-neutral-500 ml-auto font-utility-text text-utility-text">(89)</span>
+</label>
+</div>
+</div>
+<!-- Type Filter -->
+<div class="p-5">
+<h4 class="font-bold mb-3">Loại hình lưu trú</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Resort / Khu nghỉ dưỡng</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Khách sạn</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Homestay</span>
+</label>
+</div>
+</div>
+<!-- Style Filter -->
+<div class="p-5">
+<h4 class="font-bold mb-3">Phong cách</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Gia đình</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group leading-[28px]">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Cặp đôi / Tuần trăng mật</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Contact Box -->
+<div class="bg-surface-container-low rounded-xl p-5 border border-primary-fixed-dim text-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 text-on-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h4 class="font-card-title text-card-title text-primary mb-2">Cần tư vấn?</h4>
+<p class="font-utility-text text-utility-text text-on-surface-variant mb-4">Để lại yêu cầu, chuyên viên của chúng tôi sẽ liên hệ ngay.</p>
+<button class="w-full bg-primary text-on-primary font-button-label text-button-label py-2.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors font-semibold">Yêu cầu gọi lại</button>
+</div>
+</aside>
+<!-- Listing Content -->
+<div class="flex-1">
+<div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<h1 class="font-section-heading text-section-heading text-on-surface">Tìm thấy 128 combo và tour</h1>
+<div class="flex items-center gap-2">
+<span class="font-utility-text text-utility-text text-neutral-500">Sắp xếp theo:</span>
+<select class="border-outline-variant rounded-lg font-body-main text-body-main py-1.5 pl-3 pr-8 focus:ring-primary focus:border-primary">
+<option>Giá thấp nhất</option>
+<option>Giá cao nhất</option>
+<option>Khuyến mãi tốt nhất</option>
+</select>
+</div>
+</div>
+<!-- Listing Grid (Vertical Stack for Lists) -->
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<!-- Image Left -->
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A luxurious tropical resort swimming pool overlooking the ocean at sunset. The scene is bathed in warm, golden-hour light that highlights the vibrant blues of the water and the rich greens of the surrounding palm trees. The modern corporate travel aesthetic is maintained through clean composition and high clarity, inviting relaxation and premium leisure." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-CaqaF5FMkQmkUydWwSW7SQox_nKpFFOToNhuORsT1MWN7pj4fRxgV7fW3c0tJGlumYz-8S5aUKGdFxLX_UbPAb7oWDNrcd7nhtwhsgtAjGR4PIpm_Rv0kUoM3QzbvLKqH7aWm6Z9IfukYBsi-7EOY3IJ_tfw_RKFhDVSouT-sLySu3zKDKuqodITa-XZQetHKofhC8IgzYRvSY37Wc8rhy7ddBP821RzsZ5RfzuAud1mVOF9m62EEvcB8paxLAGa-I0nw4EzKi9x');"></div>
+<div class="absolute top-3 left-3 bg-sale-red text-on-error font-utility-text text-utility-text font-bold px-2 py-1 rounded">Giảm 25%</div>
+</div>
+<!-- Info Center -->
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 3N2Đ Mường Thanh Luxury Phú Quốc + Vé máy bay khứ hồi</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 2 đêm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">restaurant</span> Bữa sáng</div>
+</div>
+</div>
+<!-- Price Action Right (Mobile stacked, Desktop aligned) -->
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-neutral-400 line-through font-utility-text text-utility-text">5.400.000đ</div>
+<div class="text-sale-red font-price-sale text-price-sale">3.990.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A pristine white sand beach in front of a modern high-end resort with crystal clear turquoise water. The bright, high-contrast daytime lighting emphasizes the welcoming and vibrant atmosphere of a premium tropical vacation. The composition is clean, aligning with a professional corporate travel design system." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIVqd3FYZH94Ji6i1nA7_HfAxwdwh3WDnPS2_2apXSIVaKg_C6WuSqb1ls7JqLOFyDB4TWl4eDw2SGR6UScL-rzXqjM13RrmN8d6uJvWNKzFgq4FgDHyGwmkER9UeEpsHVnDXGGV-SjGcsTvXefpCBWCxKhsS4pq5CaUXlx7mbLqX39qwBhLdqVA_I9NA92PwMTm78Dm5r-F7JyX6quBWvvNGFq7gXzRJweIBo8OwnfQNggwkRkotOn8PBJvpAIbhQyxOFKhm1Uxgo');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 4N3Đ New World Phú Quốc Resort (Villa có hồ bơi)</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 3 đêm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">pool</span> Hồ bơi riêng</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">6.850.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A vibrant street scene in Bangkok, Thailand, featuring ornate temples in the background and bustling modern city life in the foreground. The lighting is bright and colorful, capturing the dynamic energy of an international tour destination. The image maintains a high-quality, professional aesthetic suitable for a reliable travel platform." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXm8dtAfh0ohmQ3wzOpVmyTbRdKZGvGCSVd3blW85NAL4YHRgH3e-uiOydKreS9D42OmawaLoZKmjnU60mWSGza-MK1onDEWBQLYhmuv8gWnYl4iydQbFilB-RI5A74qKinHbgVOImiah-c5GI-OmRd-uIzFVWOx5s6AkpEl4LEtOzMEe11ds5J-0cq_6VoHvrc1L0j4NO7tkNFhTP9Eic3orHofasP0digyg9vwJvygJuBBisYkUeUZVrhx9WQ157s6y_s3pixsNM');"></div>
+<div class="absolute top-3 left-3 bg-sale-red text-on-error font-utility-text text-utility-text font-bold px-2 py-1 rounded">Hot</div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neutral-200 text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Tour Thái Lan 5N4Đ: Bangkok - Pattaya (Trọn gói vé + KS 4 sao)</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 4 đêm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">tour</span> Tour trọn gói</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-neutral-400 line-through font-utility-text text-utility-text">8.500.000đ</div>
+<div class="text-sale-red font-price-sale text-price-sale">6.990.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-CaqaF5FMkQmkUydWwSW7SQox_nKpFFOToNhuORsT1MWN7pj4fRxgV7fW3c0tJGlumYz-8S5aUKGdFxLX_UbPAb7oWDNrcd7nhtwhsgtAjGR4PIpm_Rv0kUoM3QzbvLKqH7aWm6Z9IfukYBsi-7EOY3IJ_tfw_RKFhDVSouT-sLySu3zKDKuqodITa-XZQetHKofhC8IgzYRvSY37Wc8rhy7ddBP821RzsZ5RfzuAud1mVOF9m62EEvcB8paxLAGa-I0nw4EzKi9x');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 3N2Đ Đà Nẵng: Khách sạn Mường Thanh 4 sao + Vé máy bay</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 2 đêm</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">2.850.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIVqd3FYZH94Ji6i1nA7_HfAxwdwh3WDnPS2_2apXSIVaKg_C6WuSqb1ls7JqLOFyDB4TWl4eDw2SGR6UScL-rzXqjM13RrmN8d6uJvWNKzFgq4FgDHyGwmkER9UeEpsHVnDXGGV-SjGcsTvXefpCBWCxKhsS4pq5CaUXlx7mbLqX39qwBhLdqVA_I9NA92PwMTm78Dm5r-F7JyX6quBWvvNGFq7gXzRJweIBo8OwnfQNggwkRkotOn8PBJvpAIbhQyxOFKhm1Uxgo');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 4N3Đ Nha Trang: Vinpearl Resort &amp; Spa + Vé máy bay</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 3 đêm</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">4.590.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXm8dtAfh0ohmQ3wzOpVmyTbRdKZGvGCSVd3blW85NAL4YHRgH3e-uiOydKreS9D42OmawaLoZKmjnU60mWSGza-MK1onDEWBQLYhmuv8gWnYl4iydQbFilB-RI5A74qKinHbgVOImiah-c5GI-OmRd-uIzFVWOx5s6AkpEl4LEtOzMEe11ds5J-0cq_6VoHvrc1L0j4NO7tkNFhTP9Eic3orHofasP0digyg9vwJvygJuBBisYkUeUZVrhx9WQ157s6y_s3pixsNM');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 3N2Đ Đà Lạt: Colline Hotel + Vé máy bay khứ hồi</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 2 đêm</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">2.650.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXm8dtAfh0ohmQ3wzOpVmyTbRdKZGvGCSVd3blW85NAL4YHRgH3e-uiOydKreS9D42OmawaLoZKmjnU60mWSGza-MK1onDEWBQLYhmuv8gWnYl4iydQbFilB-RI5A74qKinHbgVOImiah-c5GI-OmRd-uIzFVWOx5s6AkpEl4LEtOzMEe11ds5J-0cq_6VoHvrc1L0j4NO7tkNFhTP9Eic3orHofasP0digyg9vwJvygJuBBisYkUeUZVrhx9WQ157s6y_s3pixsNM');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Tour Hàn Quốc 5N4Đ: Seoul - Nami - Everland (Trọn gói)</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 4 đêm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">tour</span> Trọn gói</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">13.900.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-CaqaF5FMkQmkUydWwSW7SQox_nKpFFOToNhuORsT1MWN7pj4fRxgV7fW3c0tJGlumYz-8S5aUKGdFxLX_UbPAb7oWDNrcd7nhtwhsgtAjGR4PIpm_Rv0kUoM3QzbvLKqH7aWm6Z9IfukYBsi-7EOY3IJ_tfw_RKFhDVSouT-sLySu3zKDKuqodITa-XZQetHKofhC8IgzYRvSY37Wc8rhy7ddBP821RzsZ5RfzuAud1mVOF9m62EEvcB8paxLAGa-I0nw4EzKi9x');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 3N2Đ Quy Nhơn: FLC Luxury Resort + Vé máy bay</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 2 đêm</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">3.890.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 9 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXm8dtAfh0ohmQ3wzOpVmyTbRdKZGvGCSVd3blW85NAL4YHRgH3e-uiOydKreS9D42OmawaLoZKmjnU60mWSGza-MK1onDEWBQLYhmuv8gWnYl4iydQbFilB-RI5A74qKinHbgVOImiah-c5GI-OmRd-uIzFVWOx5s6AkpEl4LEtOzMEe11ds5J-0cq_6VoHvrc1L0j4NO7tkNFhTP9Eic3orHofasP0digyg9vwJvygJuBBisYkUeUZVrhx9WQ157s6y_s3pixsNM');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Tour Singapore - Malaysia 5N4Đ (Trọn gói cao cấp)</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">flight</span> Vé khứ hồi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 4 đêm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">tour</span> Trọn gói</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">9.990.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div>
+<!-- Card 10 -->
+<div class="bg-surface rounded-xl border border-neutral-200 overflow-hidden ambient-shadow hover-lift transition-all duration-300 flex flex-col sm:flex-row">
+<div class="sm:w-[320px] h-[200px] sm:h-auto shrink-0 relative bg-neutral-200">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIVqd3FYZH94Ji6i1nA7_HfAxwdwh3WDnPS2_2apXSIVaKg_C6WuSqb1ls7JqLOFyDB4TWl4eDw2SGR6UScL-rzXqjM13RrmN8d6uJvWNKzFgq4FgDHyGwmkER9UeEpsHVnDXGGV-SjGcsTvXefpCBWCxKhsS4pq5CaUXlx7mbLqX39qwBhLdqVA_I9NA92PwMTm78Dm5r-F7JyX6quBWvvNGFq7gXzRJweIBo8OwnfQNggwkRkotOn8PBJvpAIbhQyxOFKhm1Uxgo');"></div>
+</div>
+<div class="p-card-padding flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-yellow-accent mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-card-title text-card-title text-primary mb-2 line-clamp-2">Combo 3N2Đ Sapa: Silk Path Grand Resort + Xe giường nằm</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-on-surface-variant font-utility-text text-utility-text">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_bus</span> Xe giường nằm</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hotel</span> 2 đêm</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="text-sale-red font-price-sale text-price-sale">3.250.000đ <span class="text-neutral-500 font-utility-text text-utility-text font-normal">/khách</span></div>
+</div>
+<button class="bg-zalo-blue text-on-primary px-6 py-2.5 rounded-lg flex items-center justify-center gap-2 font-button-label text-button-label font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span> Nhắn Zalo
+      </button>
+</div>
+</div>
+</div></div>
+<!-- Pagination -->
+<div class="mt-10 flex justify-center gap-2"><button class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors bg-surface text-on-surface"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold">1</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors bg-surface text-on-surface">2</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors bg-surface text-on-surface">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-neutral-50">...</span>
+<button class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors bg-surface text-on-surface">13</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors bg-surface text-on-surface"><span class="material-symbols-outlined">chevron_right</span></button></div>
+</div>
+</div>
+<!-- SEO Content Section -->
+<div class="mt-16 bg-neutral-50 rounded-xl p-8 border border-neutral-200">
+<h2 class="font-section-heading text-section-heading text-primary mb-4">Combo vé máy bay và khách sạn giá tốt nhất 2026</h2>
+<div class="prose prose-blue max-w-none text-on-surface-variant font-body-main text-body-main space-y-4">
+<p>Việc lựa chọn <strong>combo vé máy bay và khách sạn</strong> đang trở thành xu hướng du lịch thông minh, giúp tiết kiệm thời gian và chi phí cho du khách. Vietnam Booking tự hào cung cấp các gói combo đa dạng, từ nghỉ dưỡng cao cấp tại Phú Quốc, Nha Trang đến các hành trình khám phá quốc tế như Thái Lan, Hàn Quốc.</p>
+<p>Bảng giá tham khảo các combo phổ biến:</p>
+<div class="overflow-x-auto my-6">
+<table class="min-w-full bg-surface border border-neutral-200 rounded-lg overflow-hidden">
+<thead class="bg-surface-container-low text-on-surface font-bold">
+<tr>
+<th class="py-3 px-4 text-left border-b border-neutral-200">Điểm đến</th>
+<th class="py-3 px-4 text-left border-b border-neutral-200">Loại hình</th>
+<th class="py-3 px-4 text-right border-b border-neutral-200">Giá tham khảo</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-neutral-200">
+<tr>
+<td class="py-3 px-4">Phú Quốc</td>
+<td class="py-3 px-4">Resort 5 sao + Vé khứ hồi</td>
+<td class="py-3 px-4 text-right font-bold text-sale-red">Từ 3.990.000đ</td>
+</tr>
+<tr>
+<td class="py-3 px-4">Đà Nẵng</td>
+<td class="py-3 px-4">Khách sạn 4 sao + Vé khứ hồi</td>
+<td class="py-3 px-4 text-right font-bold text-sale-red">Từ 2.850.000đ</td>
+</tr>
+<tr>
+<td class="py-3 px-4">Thái Lan</td>
+<td class="py-3 px-4">Tour trọn gói 5N4Đ</td>
+<td class="py-3 px-4 text-right font-bold text-sale-red">Từ 6.990.000đ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Mọi chi tiết thắc mắc cần tư vấn, quý khách vui lòng liên hệ qua các kênh hỗ trợ Zalo hoặc số Hotline của chúng tôi để được chuyên viên giải đáp nhanh chóng nhất.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (JSON Anchor) -->
+<div class="fixed right-4 bottom-24 z-40 flex flex-col gap-2 shadow-xl border border-outline-variant bg-surface-container-highest dark:bg-neutral-800 rounded-xl w-16 p-2">
+<div class="hidden">Hỗ Trợ 24/7</div>
+<div class="flex flex-col gap-2">
+<button class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center hover:translate-x-[-4px] transition-transform" title="Hotline"><span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span></button>
+<button class="w-12 h-12 rounded-lg text-on-surface-variant dark:text-neutral-300 hover:bg-surface-container-low hover:translate-x-[-4px] transition-transform flex items-center justify-center" title="Zalo Chat"><span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span></button>
+<button class="w-12 h-12 rounded-lg text-on-surface-variant dark:text-neutral-300 hover:bg-surface-container-low hover:translate-x-[-4px] transition-transform flex items-center justify-center" title="Messenger"><span class="material-symbols-outlined" data-icon="forum">forum</span></button>
+<button class="w-12 h-12 rounded-lg text-on-surface-variant dark:text-neutral-300 hover:bg-surface-container-low hover:translate-x-[-4px] transition-transform flex items-center justify-center" title="Yêu Cầu Gọi Lại"><span class="material-symbols-outlined" data-icon="call_callback">phone_callback</span></button>
+</div>
+</div>
+<!-- Footer (JSON Anchor) -->
+<footer class="bg-neutral-900 dark:bg-neutral-900 border-t border-neutral-700 w-full pt-section-v-padding pb-8">
+<div class="max-w-[1170px] mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-card-gap">
+<div class="md:col-span-2">
+<div class="font-section-heading text-neutral-50 text-xl mb-4 text-neutral-100 dark:text-neutral-100">Vietnam Booking</div>
+<p class="font-utility-text text-utility-text text-neutral-400 mb-4 opacity-100">© 2024 CÔNG TY CỔ PHẦN VIETNAM BOOKING. Mã số thuế: 0310874914.</p>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-4 justify-start md:justify-end">
+<a class="text-neutral-400 hover:text-neutral-100 font-body-main text-body-main hover:underline transition-all opacity-100 hover:opacity-80 text-yellow-accent font-semibold" href="#">Về chúng tôi</a>
+<a class="text-neutral-400 hover:text-neutral-100 font-body-main text-body-main hover:underline transition-all opacity-100 hover:opacity-80" href="#">Chính sách bảo mật</a>
+<a class="text-neutral-400 hover:text-neutral-100 font-body-main text-body-main hover:underline transition-all opacity-100 hover:opacity-80" href="#">Điều khoản sử dụng</a>
+<a class="text-neutral-400 hover:text-neutral-100 font-body-main text-body-main hover:underline transition-all opacity-100 hover:opacity-80" href="#">Hướng dẫn thanh toán</a>
+<a class="text-neutral-400 hover:text-neutral-100 font-body-main text-body-main hover:underline transition-all opacity-100 hover:opacity-80" href="#">Liên hệ</a>
+</div>
+</div>
+</footer>
+</body></html>
